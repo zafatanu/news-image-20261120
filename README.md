@@ -48,6 +48,23 @@ credible outlets), OFFICIAL (attributable on-the-record statement), REPORTED
 20 November only; the DATE CHECK box lists earlier-dated stories and
 not-yet-happened events with their dates so nothing is misdated.
 
+## Verification (builder, 21 Nov 2026)
+
+- `mkdir -p out && MAKEFUN_OUTPUT_DIR=out python3 main.py` run twice:
+  byte-identical outputs, sha256
+  `59aac4f5db79cc22c980981ab786f5ce8d0369ad3c3feee88b700f3433036323`,
+  equal to the shipped `entry.png`.
+- Bind-mounted output directory (private mount namespace): pass — a sentinel
+  file in the mount survives, so the program never removes or recreates the
+  output dir; the default `/output` path also passes.
+- `entry.png`: 1024×1024, 403,768 bytes (under the 1 MiB cap).
+- Kit `check` on the commit: competition_open, snapshot, license_osi,
+  entrypoint and repo_created_after_open all pass; the transcript bundle is
+  attached at submission time.
+- 32 stories, 7 regions, 13 drawn scenes; every figure traceable to the
+  wire-verified dataset for Friday 20 November 2026. The DATE CHECK box names
+  14 earlier-dated exclusions and 3 not-yet-happened events, with dates.
+
 ## License
 
 MIT — see `LICENSE`.
